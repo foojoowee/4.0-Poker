@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empty Template</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Bubblegum+Sans&family=Karla&family=Nunito:ital,wght@1,300&family=Poor+Story&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+
+    </header>
+    
+    <div id="loading-page">
+        <div id="author-banner">
+            <img src="./Cards/Group 2.png" alt="">
+        </div>
+        <div class="suits1" >
+            <img src="./Cards/card-suits.svg">
+        </div>
+        <div id="startMenu">
+            <button onclick="startGame()">Start Game</button>
+            <button onclick="settingsOpen()">Settings</button>
+        </div>
+        <div class="suits2" >
+            <img src="./Cards/card-suits.svg">
+        </div>
+
+    </div>
+    <div id="coming-soon">
+        <div id="settings-container">
+            <p>Options are Coming Soon</p>
+            <p>Stay Tuned !</p>
+            <button onclick="settingsClose()">X</button>
+        </div>
+
+    </div>
+    <div id="buy-in-main">
+        <div id="buy-in-container">
+            <div id="buy-in-header">
+                Buy-in Option
+            </div>
+            <div id="buy-in-balance">
+                Balance: 0 $
+            </div>
+
+            <div id="buy-in-amount">
+                <p>Buy-in/Top-up Amount:</p>
+                <input id="buy-in-input" type="text" placeholder="Enter Amount"> <span style="font-size: 1.5rem"> $ </span>
+            </div>
+            <div id="buy-in-chips">
+                <img src="./Chips/chip-10.png" alt="10$ Chip" onclick="add10()">
+                <img src="./Chips/chip-50.png" alt="50$ Chip" onclick="add50()">
+                <img src="./Chips/chip-100.png" alt="100$ Chip" onclick="add100()">
+                <img src="./Chips/chip-500.png" alt="500$ Chip" onclick="add500()">
+            </div>
+            <div id="buy-in-chips">
+
+            </div>
+            <div id="buy-in-buttons">
+                <button onclick="buyInOkay()">Okay</button>
+                <button onclick="buyInCancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div id="main-container">
+        <div id="main-table">
+            <div id="dealer">
+                <div id="dealer-hand">
+                    <div class="hand-card">
+                        <img src="Cards/cards/BACK.png" alt="">
+                    </div>
+                    <div class="hand-card">
+                        <img src="Cards/cards/BACK.png" alt="">
+                    </div>
+                </div> 
+                <p class="dealer-hand-value"></p>
+            </div>
+
+            <div id="game-info">
+                <div id="game-text">
+                </div>
+                <div id="play-again">
+                    <button onclick="playAgainButton()">Play Again</button>
+                    <button onclick="reset()">Quit Playing</button>
+                </div>
+
+
+
+                <div id="player-action">
+                    <button id="hit-button" onclick="hit(player1Index)">Hit</button>
+                    <button id="stick-button" onclick="stick()">Stick</button>
+                </div>
+            </div>
+
+            <div id="deal-button-container">
+                <button id="deal-button" onclick="dealCards()">Deal Cards</button>
+            </div>
+            <div id="bet">
+                <p>Place Your Bet:   <input type="text" id="bet-size" placeholder="100" onchange="updateBet()">&nbsp $</p> 
+                
+                <div id="betting-chips">
+                    <img src="./Chips/chip-10.png" alt="10$ Chip" onclick="add10bet()">
+                    <img src="./Chips/chip-50.png" alt="50$ Chip" onclick="add50bet()">
+                    <img src="./Chips/chip-100.png" alt="100$ Chip" onclick="add100bet()">
+                    <img src="./Chips/chip-500.png" alt="500$ Chip" onclick="add500bet()">
+                </div>
+            </div>
+
+
+            <div id="player">
+                <p class="player-hand-value"></p>
+                <div id="player-hand">
+                    <div class="hand-card">
+                        <img src="./Cards/cards/BACK.png" alt="">
+                    </div>
+                    <div class="hand-card">
+                        <img src="./Cards/cards/BACK.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div id="cur-bet">
+                <p>Current Bet: 0 $ </p>
+            </div>
+            <div id="reset">
+                <button id="reset-button" onclick ="reset()">Reset</button>
+            </div>
+            <div id="buy-in">
+                <button onclick="buyInOpen()">Buy-in / Top-up</button>
+            </div>  
+            <div id="player-info">
+                <div id="player-name" contenteditable spellcheck="false">#Guest69</div>
+                <div id="player-balance">0 $</div>
+                <div id="net-change">+500$</div>
+            </div>  
+            <div id="main-settings">
+                <button onclick="settingsOpen()">Settings</button>
+            </div>  
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
